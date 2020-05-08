@@ -1,0 +1,119 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+@font-face {
+  font-family: digital;
+  src: url(clock.ttf);
+}
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body{
+  display: flex;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: #262626;
+}
+h1{
+  font-size: 40px;
+  color: #1da1f2;
+  font-family: arial;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  padding: 10px;
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h2{
+  font-size: 40px;
+  color: #ff0000;
+  font-family: digital;
+  border-bottom: 1px solid #fff;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 5px;
+}
+ul{
+  display: flex;
+}
+ul li{
+  position: relative;
+  display: block;
+  color: #666;
+  font-size: 30px;
+  height: 60px;
+  width: 60px;
+  background: #171515;
+  line-height: 60px;
+  border-radius: 50%;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: .5s;
+}
+ul li:before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0.9);
+  transition: .5s;
+}
+/*targetting ul's start, stop and reset*/
+
+ul li:nth-child(1):before{
+  background: #1da1f2;
+}
+ul li:nth-child(2):before{
+  background: #ff0000;
+}
+ul li:nth-child(3):before{
+  background: #e1306c;
+}
+/*targetting ul's start, stop and reset for before hover*/
+
+ul li:nth-child(1):hover:before{
+  filter: blur(3px);
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #d35000;
+  box-shadow: 0 0 15px #1da1f2;
+}
+ul li:nth-child(2):hover:before{
+  filter: blur(3px);
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #d35000;
+  box-shadow: 0 0 15px #ff0000;
+}
+ul li:nth-child(3):hover:before{
+  filter: blur(3px);
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #d35000;
+  box-shadow: 0 0 15px #e1306c;
+}
+/*targetting ul's start, stop and reset for hover*/
+
+ul li:nth-child(1):hover{
+  color: #26a4f2;
+  box-shadow: 0 0 15px #1da1f2;
+  text-shadow: 0 0 15px #1da1f2;
+}
+ul li:nth-child(2):hover{
+  color: #ff1a1a;
+  box-shadow: 0 0 15px #ff0000;
+  text-shadow: 0 0 15px #ff0000;
+}
+ul li:nth-child(3):hover{
+  color: #e23670;
+  box-shadow: 0 0 15px #426782;
+  text-shadow: 0 0 15px #426782;
+}
